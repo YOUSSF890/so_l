@@ -11,7 +11,7 @@ OBJ = $(SRC:%.c=%.o)
 BNAME = soolong
 NAME = so_long
 HFILE = so_long.h
-HEADERFILEB = bonus/so_long_bonus.h
+HEADERFILEB =  bonus/so_long_bonus.h
 BOBJF=$(BSRC:%.c=%.o)
 
 all: $(NAME)
@@ -19,10 +19,10 @@ all: $(NAME)
 bonus: $(BNAME)
 
 $(NAME): main.c $(OBJ)
-	$(CC) $(CFLAGS) $^ -L/home/ylagzoul/Desktop/include/mlx/ -lmlx -lX11 -lXext -o $@
+	$(CC) $(CFLAGS) $^ -L ./mlx -lmlx -lXext -lX11 -o $@
 
 $(BNAME): $(BOBJF)
-	$(CC) $(CFLAGS) $^ -L/home/ylagzoul/Desktop/include/mlx/ -lmlx -lX11 -lXext -o $@
+	$(CC) $(CFLAGS) $^ -L ./bonus/mlx -lmlx -lXext -lX11 -o $@
 
 %.o: %.c $(HFILE)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -41,3 +41,6 @@ fclean: clean
 re:	fclean all
 
 .PHONY: clean
+
+
+

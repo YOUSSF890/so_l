@@ -9,7 +9,8 @@
 # include <stdlib.h>
 # include <fcntl.h>
 #include <stdio.h>
-#include "/home/ylagzoul/Desktop/include/mlx/mlx.h"
+// # include "mlx/mlx.h"
+// #include "/home/ylagzoul/Desktop/include/mlx/mlx.h"
 
 typedef struct game
 {
@@ -29,6 +30,7 @@ typedef struct game
     void    *exit;
     void    *bg;
     void    *empty;
+
 }           t_game;
 
 # define SIZE 64
